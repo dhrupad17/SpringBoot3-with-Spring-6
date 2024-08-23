@@ -20,13 +20,13 @@ public class JobRestController {
     }
 
     @GetMapping("/jobPost/{postId}")
-    public JobPost addJob(@PathVariable int postId){
+    public JobPost getJob(@PathVariable int postId){
         return service.getJob(postId);
     }
 
     @PostMapping("jobPost")
     public JobPost addJob(@RequestBody JobPost jobPost){
-        service.addhJob(jobPost);
+        service.addJob(jobPost);
         return service.getJob(jobPost.getPostId());
     }
 
@@ -40,5 +40,17 @@ public class JobRestController {
     public String deleteJob(@PathVariable int postId){
         service.deleteJob(postId);
         return "Deleted Job Successfully";
+    }
+
+    @GetMapping("load")
+    public String loadData(){
+        service.load();
+        return "Job List is loaded successfully";
+    }
+
+    @GetMapping("jobPosts/keyword/{keyword}")
+    public List<JobPost> searchByKeyword(@PathVariable("keyword") String keyword){
+        return service.search(keyword);
+
     }
 }
