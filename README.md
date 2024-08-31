@@ -1,7 +1,6 @@
 # Docker Commands Used in this repository
 
 
-
 ### 1. `docker --version`
 - **Description:** Displays the installed version of Docker.
 
@@ -46,4 +45,35 @@
 
 ### 15. `docker-compose down`
 - **Description:** Stops and removes all containers, networks, and images created by `docker-compose up`.
+
+---
+
+# Git Commands Used in this repository
+
+### 1. `git init`
+- **Description:** Initializes a new Git repository in the current directory. This creates a `.git` directory to track versions and changes.
+
+### 2. `git add .`
+- **Description:** Stages all the changes (new files, modifications, deletions) in the current directory and its subdirectories for the next commit.
+
+### 3. `git commit -m "Commit Message"`
+- **Description:** Commits the staged changes with a descriptive message. The message should summarize the changes made in that commit.
+
+### 4. `git status`
+- **Description:** Displays the current status of the working directory and staging area. It shows which files are modified, staged, or untracked.
+
+### 5. `git pull origin main`
+- **Description:** Fetches the latest changes from the remote repository’s `main` branch and merges them into the current branch.
+
+### 6. `git push origin main`
+- **Description:** Pushes the committed changes from your local `main` branch to the remote repository’s `main` branch.
+
+### 7. `git branch -m master main`
+- **Description:** Renames the current branch from `master` to `main`. This is commonly used when switching the default branch name.
+
+### 8. `git pull origin <branch-name> --rebase`
+- **Description:** Fetches the latest changes from the specified remote branch and applies them on top of your current branch’s commits. This avoids creating unnecessary merge commits.
+
+### 9. `git rebase --continue`
+- **Description:** Continues the rebase process after resolving any conflicts. This command is used when a rebase is interrupted by conflicts and those conflicts have been resolved.
 
